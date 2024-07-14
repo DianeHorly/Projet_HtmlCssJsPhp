@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<!-- lingua della pagina -->
+<html lang="it">
+<head>
+  <!-- titolo della pagina -->
+  <title> CONTATTI </title>
+<!--definizione del set di caratteri -->	
+<meta charset="UTF-8">
+
+<!-- ridimensione della pagina secondo il browser -->
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+<!--Istruisce gli spider dei motori di ricerca (MdR) su cosa possono fare -->
+<meta name="robots" content="index ,nofollow">
+
+<!-- impostazione del favicon imagine -->
+<link rel="icon" href="img/mente.jpg" type="image/jpg"
+sizes="16x16">
+
+<!-- collegamento degli informazioni dello style css (contatti.css) con la pagina contatti.php -->
+<link rel="stylesheet" type="text/css" href="css/contatti.css">
+
+<!-- collegamento degli informazioni pagina javascript (form.js) con la pagina contatti.php -->
+<script type="text/javascript" src="script/form.js"></script>
+
+<!--  collegamento degli informazioni dello style css di social netword (font-awesome.min.css) con la pagina home.html -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- inizio del corpo della pagina -->
+<body>
+<!--header html--> 
+<header>
+
+</header>
+
+<!-- barra link html  o di menu -->
+<nav>
+<ul>
+  <li><a href="php/logout.php"> LOGOUT</a> </li>
+  <li><a class="active" href="contatti.html"> CONTATTI</a></li>
+  <li><a href="immagini.html"> GALLERIA</a></li>
+  <li><a href="luogo.html"> LUOGHI</a></li>
+  <li><a href="home.html"> HOME</a></li>
+</ul>
+</nav>
+
+<!-- html content-->
+<h2>CONTATTACI</h2> 
+<div id="container">
+	<P> per contattaci deve riempire questi campi e cliccare su invia </P>
+	<div class="col-md-4">
+      <form  id="dati-contact" action="contatti.php" name="emailform" method="POST">
+	  
+	    <div class="form-group">
+	    NOME
+		    <input type="text" name="nome" required>
+		</div>
+
+		<div class="form-group">
+	    COGNOME:
+		    <input type="text" name="cognome" required>
+		</div>
+
+       <!-- inserimento di radio box -->
+		<div class="form-group">
+			GENDER:
+		    <input type="radio" name="gender" value="femine">Femine
+		    <input type="radio" name="gender" value="maschio">Maschio
+		</div>
+
+        <!-- inserire una email-->
+		<div class="form-group">
+			E-MAIL:
+		    <input type="email" name="email" required>
+		</div>
+        <!-- inserire un commento -->
+        <div class="form-group">   
+            <label>Commento:<br>
+                <textarea name="commento" rows="5" cols="50"
+maxlength="500"> (max 500 caratteri) </textarea>
+            </label>
+        </div>
+
+		<div class="form-group">
+		    <input type="submit" name="invia" value="INVIA">
+        </div>  
+    </form>
+	 
+</div>
+</div>
+
+<!-- Collegamento con la database -->
+<?php
+include("php/datacontatti.php");
+?>
+
+<!--html footer -->
+<div class="footer">
+ <div class="footer-social-icon">
+    <ul>
+       <li><a href="https://www.facebook.com/groups/389645488330504/" target="blank"><i class="fa fa-facebook"></i></a> </li>
+       <li><a href="https://twitter.com" target="blank"><i class="fa fa-twitter"></i></a> </li>
+       <li><a href="https://support.google.com/plus/?hl=it#topic=9259565" target="blank"><i class="fa fa-google-plus"> </i></a> </li>
+       <li><a href="https://www.youtube.com/watch?v=N4Fr3ujgPq4&t=338s" target="blank"><i class="fa fa-youtube"> </i></a> </li>
+    </ul> 
+  </div>
+
+<!-- impostazione date di creazione della pagina e data attuale-->
+&copy;2019-<?php 
+    echo date("Y");
+    ?>
+</div>
+
+</body>
+</html>

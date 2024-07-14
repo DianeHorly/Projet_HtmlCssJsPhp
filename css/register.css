@@ -1,0 +1,96 @@
+/*il contenute di tutta la pagina deve avere 0px di spazio con i bordi e con la margine */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*body deve avere uno sfondo verde scuro ,il testo bianco */
+body{
+	background-color: #2f4f4f;
+	color: white;
+	font-family: serif;
+	background-position: 50% 70%;
+}
+
+/* gli elementi del "don-r" avere una margina di 180px  e il tag don-r ha una larghezza di 120px*/
+div#don-r{
+	width:420px;
+	margin: 80px auto 0px auto;
+}
+
+/* gli elementi del "don-r" avere una margina di 50px */
+
+div#don-r{
+	width:420px;
+	margin: 50px auto 0px auto;
+}
+/*il paragrafi deve disporsi al centro e essere separato di 2px */
+p{
+	text-align: center;
+	padding: 2px;
+}
+
+/*il titolo in h1 deve disporsi al centro e separato di 10px dai bordi  */
+h1{
+	text-align: center;
+	padding: 10px;
+	margin-left: 70px;
+}
+
+/*gli elementi nel tag input devono essere in block con colore di sfondo #E0FFFF */
+input{
+	padding: 5px 15px;
+	margin: 5px;
+	display: block;
+	height: 40px;
+	width: 400px;
+	border-radius: 30px;
+	border: 1px solid black;
+	font-size: 16pt;
+	background-color: #E0FFFF;
+	color: black;
+    outline: none;
+}
+
+/*il tag input del tipo "submit" al passaggio del mouse cambia di cursore */
+#dati input[type="submit"] {
+	border: none;
+	cursor: pointer;
+	background-color: green;
+	color: white;
+	margin-left: 20px;
+}
+
+/*il tag input del tipo submit per il login al passaggio del mouse cambia di cursore e un colore di sfondo verde */
+#log input[type="submit"] {
+	border: none;
+	cursor: pointer;
+	height: 30px;
+	width: 100px;
+	font-family: serif;
+	float: right;
+	background-color: green;
+	color: white;
+}
+
+/* il link "a" contenuto in dor-r deve disporsi al centro e avere una margina di 65px dal sinistra */
+#don-r a {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	margin-left: 65px;
+}
+
+/*al passaggio del mouse ,il link "a" contenuto in dor-r deve essere sottolineato */
+#don-r a:hover {
+	text-decoration: underline;
+}
+
+div.errore{
+	width: 400px;
+	padding: 10px;
+	margin: 10px auto;
+	background-color: red;
+	border: 1px solid rgb(165,42,42);
+	text-align: center;
+}

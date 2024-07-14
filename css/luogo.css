@@ -1,0 +1,119 @@
+
+/* mettere  a 500px l'altezza del contenitore "mapid" */
+div#mapid {
+	height: 500px;
+}
+
+/*gli elementi del tag 2 "th" devono essere separati di 20px dai bordi e disporsi al centro */
+th {
+	padding: 20 20px;
+	text-align: center;
+}
+
+/* il contenuto del tag "th" deve essese separato  di 10px dai bordi */
+td {
+	padding: 10px;
+}
+
+/* il contenuto del tag "table" avere una margina di 25px a sinistra */
+table {
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+
+/* mettere i contenuti dei tag table,th,tr,td in una tabella con righe e colonne */
+table, th, tr, td{
+	border-collapse: collapse;
+	border: 1px solid  black;
+}
+
+/* gli elementi della lista non ordinata sono collegate e hanno il sfondo nero . */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* mettere in blocco i link della lista non ordinata contenuta nel tag "nav" e con nessun decorazione */
+nav li {
+  float: right;
+  border-right:1px solid #bbb;
+}
+
+/* mettere in blocco i link della lista non ordinata contenuta nel tag "nav" e con nessun decorazione */
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*al passaggio del mouse , lo sfodo degli elementi della lista deve essere verde */
+nav li a:hover:not(.active) {
+  background-color: green;
+}
+
+/*lo sfondo della pagina corrente deve essere verde per indicarla */
+.active {
+  background-color: green;
+}
+
+/* il contenuto della classe header deve essere separato di 20px dai bordi e avere uno fsondo verde scuro */
+.header{
+	background-color: #2f4f4f;
+	padding: 20px;
+	margin: 0px;
+}
+
+/* il contenuto del tag h1 deve  essere disporsi al centro e avere il colore bianco */ 
+h1{
+	color: white;
+	text-align: center;
+}
+
+/* il contenuto del tag h2 deve  essere disporsi al centro e avere uno sfondo aquamarine */ 
+h2{
+	background-color: aquamarine;
+	text-align: center;
+
+}
+
+/* il contenuto del tag h3 deve  essere disporsi al centro */
+h3{
+	text-align: center;
+}
+
+/*lo sfondo del footer deve essere verde scuro con il testo posizionato al centro */
+.footer{
+  background-color: #2f4f4f;
+  padding-bottom: 20px;
+  margin: 0;
+  padding: 20px;
+  text-align: right;
+  color: white;
+}
+
+.footer{
+  background-color: #2f4f4f;
+  padding: 15px;
+  text-align: left;
+  color: white;
+}
+
+/* gli elementi del footer devono avere il colore bianco */ 
+.linkfooter{
+  color: white;
+  text-decoration: none;
+}
+
+/*al passagio del mouse ,il colore del link deve essere rosso */
+.footer a:hover{
+  color:blue;
+}
+
+#anno{
+  text-align: right;
+}

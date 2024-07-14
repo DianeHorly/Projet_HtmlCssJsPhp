@@ -1,0 +1,176 @@
+
+/*il colore di sfondo della pagina immagini.php deve essere grigio */
+body{
+  background-color: #bbbb ;
+}
+
+/* header:colore di sfondo blue suro ,il testo scritto in bianco e posizionato al centro; */
+.header{
+    background-color: #2f4f4f;
+    padding:20px;
+    text-align: center;
+    color:white;  
+} 
+
+/* gli elementi della lista non ordinata sono collegate e hanno il sfondo nero . */
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+/* forza gli elementi della barra link a disporsi a destra con linea di border visibile a sinistra */
+li {
+  float: right;
+  border-left: 1px solid #bbb;
+}
+/* raggrupare 'li' e 'a' in blocco */ 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+/* al passaggio del mouse, aggiungere un colore di sfondo verde */
+li a:hover:not(.active) {
+  background-color: green;
+}
+
+/* impostare lo sfondo del link della lista in  colore verde quando si trova sulla paggina corrente */
+.active{
+  background-color: green;
+}
+
+
+
+/* gli elementi contenuti nella classe"corpo" deve avere come sfondo,una immagine repetuta */
+.corpo  {
+  box-sizing: border-box;
+  background-image: url(../img/font1.jpg);
+  background-repeat: repeat;
+  padding: 200px;
+}
+
+/* Posiziona il contenitore(classe) dell'immagine (necessario per posizionare le frecce sinistra e destra)*/
+.container {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Nascondi le immagini per impostazione predefinita */
+.mySlides {
+  display: none;
+}
+
+/* Aggiungi un puntatore quando passi con il mouse sulle immagini in miniatura */
+.cursor {
+  cursor: pointer;
+}
+
+/* Pulsanti successivi e precedenti */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Posiziona il "pulsante successivo" a destra */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Al passaggio del mouse, aggiunggere un colore di sfondo nero con un po 'di trasparenza*/
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* disposizione delle immagine */
+.mySlides img {
+  height: 600px;
+}
+
+/* imporre l'altezza dell'immagine a 100px */
+.column img {
+  height: 100px;
+}
+
+/* porre l'immagine in mezzo con larghezza di 100%  */
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Numero di testo (1/12 ecc.) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Contenitore per testo immagine */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* dodici colonne affiancate */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Aggiungere un effetto di trasparenza per le immagini thumnbail */
+.demo {
+  opacity: 0.6;
+}
+
+/* effetti di visibilità al passaggio del mouse sull'immagine */
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* lo sfondo del footer deve essere verde scuro con il testo posizionato al centro */
+.footer{
+  background-color: #2f4f4f;
+  padding:15px;
+  text-align:center;
+  color:white;
+}
+
+/* gli elementi del footer devono avere il colore bianco */ 
+.linkfooter{
+  color: white;
+  text-decoration: none;
+}
+
+/* mettere il colore del testo in rosso al passagio del mouse*/
+.footer p a:hover{
+  color: red;
+}

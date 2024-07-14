@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<!-- lingua della pagina -->
+<html lang="it">
+<head>
+    <!-- titolo della pagina -->
+	<title>LOGIN</title>
+	<!--definizione del set di caratteri -->
+	<meta charset="utf-8">
+	<!-- ridimensione della pagina secondo il browser -->
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    
+    <!--Istruisce gli spider dei motori di ricerca (MdR) su cosa possono fare -->
+    <meta name="robots" content="index ,nofollow">
+
+    <!-- impostazione del favicon imagine -->
+    <link rel="icon" href="img/mente.jpg" type="image/jpg"
+sizes="16x16">
+
+    <!-- collegamento degli informazioni dello style css (register.css) con la pagina login.php -->
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+
+	<!-- collegamento degli informazioni pagina javascript (form.js) con la pagina contatti.php -->
+	<script type="text/javascript" src="script/form.js"></script>
+</head>
+
+<!-- contenuto della pagina --> 
+<body>
+<h1>ACCEDI ALLA TUA PAGINA PERSONALE</h1>
+
+<div id="don-r">
+	<!-- inserire il form -->
+	<form  id="dati" name="emailform" action="login.html" method="POST">
+		<h2>E-mail</h2>
+		<input type="email" name="email" placeholder="E-MAIL" required><br/>
+		<h2>Password</h2>
+		<input type="password" name="password" placeholder="PASSWORD" required minlength="5" maxlength="10">
+<br/>
+		<input type="submit" name="login" value="Accedi" onclick="valform();">
+	</form>
+
+	<!-- collegamento con la pagina register.php -->
+	<a href="register.html"> Non hai ancora fatto la registrazione clicca qui! </a>
+</div>
+
+<!-- collegamento con la pagina datalogin.php -->
+<?php 
+	include("php/datalogin.php"); 
+?>
+
+</body>
+</html>

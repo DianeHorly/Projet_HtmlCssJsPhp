@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ling="it">
+
+<head>
+  <!-- titolo della pagina  -->
+	<title> galleria immagine</title>
+	
+  <!--definizione del set di caratteri --> 
+  <meta charset="UTF-8">
+
+  <!-- ridimensione della pagina secondo il browser -->
+  <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+  <!--Istruisce gli spider dei motori di ricerca (MdR) su cosa possono fare -->
+  <meta name="robots" content="index ,nofollow">
+
+  <!-- impostazione del favicon imagine -->
+  <link rel="icon" href="img/mente.jpg" type="image/jpg"
+sizes="16x16">
+
+  <!-- collegamento degli informazioni dello style css (immagine.css) con la pagina immagine.html -->
+  <link rel="stylesheet" type="text/css" href="css/immagini.css">
+
+</head>
+
+<!-- corpo della pagina-->
+<body>
+<!--header html--> 
+<div class="header">
+<h1> GALLERIA  IMMAGINE </h1>
+</div>
+
+<!-- barra link html -->
+<ul>
+  <li><a href="php/logout.php"> LOGOUT</a> </li>
+  <li><a href="contatti.html"> CONTATTI</a></li>
+  <li><a class="active" href="immagini.html"> GALLERIA</a></li>
+  <li><a href="luogo.html"> LUOGHI</a></li>
+  <li><a href="home.html"> HOME</a></li>
+</ul>
+
+<!-- un contenitore  del corpo della pagina-->
+<div class="corpo">
+  <!-- Contenitore per la galleria di immagini-->
+<div class="container">
+
+  <!-- Immagini a tutta larghezza con testo numerico -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 12</div>
+      <img src="img/casino-blackjack.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 12</div>
+      <img src="img/loterie.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 12</div>
+      <img src="img/giochi.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 12</div>
+      <img src="img/spooky.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 12</div>
+      <img src="img/gioco-dazzardo-problematico.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 12</div>
+      <img src="img/font.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 /12 </div>
+      <img src="img/casino1.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 12</div>
+      <img src="img/casino-03.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 12</div>
+      <img src="img/giochi-smartphone.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10/ 12</div>
+      <img src="img/videopoker.jpeg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">11 / 12</div>
+      <img src="img/dipendente.png">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">12 / 12</div>
+      <img src="img/gAzard.jpg">
+  </div>
+
+  <!--Pulsanti precedente e successivo -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Testo dell'immagine-->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Immagine in miniatura -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/casino-blackjack.jpg" onclick="currentSlide(1)" alt="casino-blackjack">
+    </div>
+    <div class="column"> 
+      <img class="demo cursor" src="img/loterie.jpg" onclick="currentSlide(2)" alt="lotterie">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/giochi.jpg" onclick="currentSlide(3)" alt="gioco-carta-roulette-dadi">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/spooky.jpg" onclick="currentSlide(4)" alt="spooky">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/gioco-dazzardo-problematico.jpg" onclick="currentSlide(5)" alt="gioco-dazzardo-problematico">
+    </div> 
+    <div class="column">
+      <img class="demo cursor" src="img/font.jpg" onclick="currentSlide(6)" alt="gioco-dadi e carta">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/casino1.jpg" onclick="currentSlide(7)" alt="casino1">
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="img/casino-03.jpg" onclick="currentSlide(8)" alt="roulette">
+    </div>
+
+     <div class="column">
+      <img class="demo cursor" src="img/giochi-smartphone.jpg" onclick="currentSlide(9)" alt="giochi-smartphone">
+    </div>
+
+     <div class="column">
+      <img class="demo cursor" src="img/videopoker.jpeg" onclick="currentSlide(10)" alt="videopoker">
+    </div>
+
+     <div class="column">
+      <img class="demo cursor" src="img/dipendente.png" onclick="currentSlide(11)" alt="dipendente">
+    </div>
+
+     <div class="column">
+      <img class="demo cursor" src="img/gAzard.jpg" onclick="currentSlide(12)" alt="gAzard">
+    </div>
+    
+  </div>
+</div>
+</div>
+<!-- collogamento con la pagine javascript (immagini.js) -->
+<script src="javascript/immagini.js"></script>
+
+<!--html footer -->
+<div class="footer">
+  <!-- paragrafi contenente link -->
+  <p><a class="linkfooter" href="luogo.html">mappa</a></p>
+  <p><a class="linkfooter" href="test.html">test-dipendenza</a></p>
+  <p><a class="linkfooter" href="home.html">home</a></p>
+  <p><a class="linkfooter" href="contatti.html">contattaci</a></p>
+</div>
+
+</body>
+</html>

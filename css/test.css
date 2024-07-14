@@ -1,0 +1,80 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+/* il corpo della pagina ha uno sfondo bianco */
+body{
+  background-color: white;
+} 
+
+/*il contenuto del header deve posizionarsi a destra */
+.header{
+  border: 5px solid #2f55f5;
+  background-color: #2f5f6f;
+  padding: 15px;
+  text-align: right;
+}
+
+/* il contenuto del tag "a" deve avere un colore bianco e separato di 7px dai bordi */
+a{
+  color: white;
+  text-decoration: none;
+  border:1px solid white;
+  padding: 7px;
+}
+
+h1{
+  color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+h2{
+  margin: 10px;
+}
+
+/* i paragrafi devono essere i grasseto ,separati di 10px dai bordi e di colore nero */
+p{
+  font-weight: bold;
+  color: black;
+  margin: 10px;
+}
+
+/*il contenuto della classe content ha uno sfondo blue scuro */
+.content{
+  background-color: #2f5f6f6f;
+  margin: 20px;
+  font-size: 20px;
+  
+}
+
+/*il contenute di identify deve essere rosso ,in grasseto e avere uno style italico */
+#identify{
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.lis{
+  font-style: italic;
+}
+
+/*il contenuto  del tag "li" contenuto nel "lis" deve disporsi a sinistra*/
+.lis li{
+  font-style: italic;
+  float:  left;
+}
+
+/* ol:il  testo in italico */
+ol{
+  font-style: italic;
+}
+
+ol li{
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  background-color: white;
+}
+

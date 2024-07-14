@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- mettere la ligua della pagine -->
+<html lang="it">
+
+<head>
+<!--definizione del set di caratteri -->	
+<meta charset="UTF-8">
+
+<!-- ridimensione della pagina secondo il browser -->
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+<!--Istruisce gli spider dei motori di ricerca (MdR) su cosa possono fare -->
+<meta name="robots" content="index ,nofollow">
+
+<!-- impostazione del favicon imagine -->
+<link rel="icon" href="img/mente.jpg" type="image/jpg"
+sizes="16x16">
+
+<!-- collegamento degli informazioni dello style css (luogo.css) con la pagina luogo.php -->
+<link rel="stylesheet" href="css/luogo.css">
+     <!-- link per impostare la mappa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+   
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+</head>
+
+<body>
+	
+<!--header html--> 
+<div class="header">
+	<h1> I DIVERSI LUOGHI DI GIOCO </h1>
+</div>
+
+<!-- barra link html o di menu-->
+<nav>
+<ul>
+  <li><a href="php/logout.php"> LOGOUT</a> </li>
+  <li><a href="contatti.html"> CONTATTI</a></li>
+  <li><a href="immagini.html"> GALLERIA</a></li>
+  <li><a class="active" href="luogo.html"> LUOGHI</a></li>
+  <li><a href="home.html"> HOME</a></li>
+</ul>
+</nav>	
+
+<div id="mapid"></div>
+  <script>
+
+	var mymap = L.map('mapid').setView([45.542120,8.140768], 11);
+
+   
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 20,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
+	
+	// indicazione dei luoghi di gioco con una piccola immagine
+	L.marker([45.4455069,8.2280081]).addTo(mymap);
+	L.marker([45.5200784,8.1000127]).addTo(mymap);
+	L.marker([45.5678872,8.1770799]).addTo(mymap);
+	L.marker([45.5616405,8.0566833]).addTo(mymap);
+	L.marker([45.562328,8.1214012]).addTo(mymap);
+	
+  </script>
+	<h2> Tabella </h2>
+
+	<?php		
+               // connessione con la database
+                include("php/database.php");
+	
+                print "<h3> Sale gioco </h3> ";
+	?>		
+	<!-- creazione della tabella -->	
+	<table>
+	<tr>
+		<th>codice</th>
+		<th>Denominazione</th>
+		<th>Indirizzo</th>	
+		<th>Comune</th>	
+		<th>Tipologia</th>
+		<th>cod_iscr</th>		
+	</tr>		
+
+	<?php	
+		
+        $sql = "SELECT codice, denominazione, indirizzo, comune_provincia, tipologia, cod_iscr FROM mapp" ;	
+	
+		//print $sql;
+		
+		$sqldata = $pdo->prepare($sql);
+		$sqldata->execute();
+	
+		$result = $sqldata->fetchAll();
+		foreach ($result as $r) {
+	?>
+
+	<!-- creazione delle righe della tabella; -->
+	<tr>
+	    <td><?= $r['codice']; ?></td>		
+		<td><?= $r['denominazione']; ?></td>
+        <td><?= $r['indirizzo'] ; ?></td>		
+        <td><?= $r['comune_provincia'] ; ?></td>		
+        <td><?= $r['tipologia'] ; ?></td>		
+        <td><?= $r['cod_iscr']; ?></td>    
+	</tr>		
+	<?php	
+		}
+	?>
+	</table>
+
+<!--html footer -->
+<div class="footer">
+  <!-- paragrafi contenente link -->
+  <p><a class="linkfooter" href="luogo.html">mappa</a></p>
+  <p><a class="linkfooter" href="test.html">test-dipendenza</a></p>
+  <p><a class="linkfooter" href="home.html">home</a></p>
+  <p><a class="linkfooter" href="contatti.html">contattaci</a></p>
+  <!-- impostazione date di creazione della pagina e data attuale-->
+  <div id="anno">
+&copy;2019-<?php 
+      echo date("Y");
+?>
+</div>
+
+</div>
+		
+</body>
+</html>

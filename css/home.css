@@ -1,0 +1,193 @@
+/* il contenuto di tutta la pagine non deve essere separato dai bordi */
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* il colore del corpo della pagina deve essere grigio */
+body{
+  background-color: #2f4f4f4f;
+}
+
+/* il header deve avere uno spazio di 120px e contenere uno sfondo con una immagine posizionata al centro e ripetuta */
+header{
+    background-image: url("../img/gambling.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    padding:120px ;
+} 
+
+/* gli elementi della lista non ordinata sono collegate e hanno il sfondo nero . */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* forzare gli elementi della lista non ordinata,contenuta nel tag "nav" a disporsi a destra */
+nav li {
+  float: right;
+  border-right:1px solid #bbb;
+}
+
+/* mettere in blocco i link della lista non ordinata contenuta nel tag "nav" e con nessun decorazione */
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*al passaggio del mouse , lo sfodo degli elementi della lista deve essere verde */
+nav li a:hover:not(.active) {
+  background-color: green;
+}
+
+/*lo sfondo della pagina corrente deve essere verde per indicarla */
+.active {
+  background-color: green;
+}
+
+/*mettere il colore di sfondo della classe "content" in grigio chiaro */
+.content{
+  background-color: #f1f1f1f1;
+  padding: 15px;
+  margin: 40px;
+
+}
+
+/* il titolo contenuto nel tag "h2" deve essere bianco e posizionato in centro con colore di sfondo verde-scuro */
+h2{
+  background-color: #2f5f4f;
+  color: white;
+  text-align: center;
+}
+
+/*gli elementi della  lista ordinata contenuti nel paragrafi del contenitore "content"devono essere posizionati a sinistra e avere una margina di 10px */
+ol li{
+  text-align: left;
+  margin: 10px;
+}
+
+/* i  2 video devono essere posizionati a sinistra e separati dal bordo di 10px */
+video{
+  float: left;
+  margin: 0 1em 0 1em;
+  padding: 10px;
+}
+
+/*i paragrafi devono essere separati dall'alto con uno spazio di 10px */
+p {
+  padding-top: 10px;
+}
+
+/* le immagini deve essere separate dai bordi con un spazio di 15px */
+img {
+  padding: 15px;
+}
+
+h1{
+	font-style: italic;
+	padding: 20px 20px;
+	font-family: serif;
+	font-weight: bold;
+	margin: 30px;
+}
+
+/*il link contenuto nel contenitore "contenent" deve essere sottolineato con il testo blu  */
+.content a {
+  color: blue;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+/*al passagio del mouse ,il colore del link deve essere rosso */
+.content a:hover{
+  color: red;
+}
+
+/*lo sfondo del footer deve essere verde scuro */
+.footer{
+  background-color: #272727;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 20px 0px;
+}
+
+/* mettre lalarghezza della class "footer-social-icon" al 100% ,l'altezza in automatico   */
+.footer-social-icon{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* gli elementi di ul contenuto nel footer-social-icon devono essere al centro */
+.footer-social-icon ul{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+/*   */
+.footer-social-icon ul li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background-color: #32CD32;
+
+}
+
+/* i link del footer     */
+.footer-social-icon ul li a{
+	color: #272727;
+	font-size: 25px;
+}
+
+/* mettere immagini al centro del  cerchio    */
+.footer-social-icon ul li a i{
+	line-height: 50px;
+}
+
+/*separare di 20 px dall' alto il testo  */
+.footer-menu-one{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 20px;
+}
+
+/*mettere il contenuto in centro */
+.footer-menu-one ul{
+    text-align: center;
+}
+
+/*mettere il contenuto in una sola riga */
+.footer-menu-one ul li{
+	display: inline-block;
+	margin: 0px 15px;
+}
+
+/*trasforma il testo in più grande carattere con colore bianco */
+.footer-menu-one ul li a{
+	font-family: arial;
+	font-size: 13px;
+	font-weight: 600;
+	color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+

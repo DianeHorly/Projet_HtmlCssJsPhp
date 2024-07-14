@@ -1,0 +1,154 @@
+/*tutta la pagina non deve essere separata dal bordo*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*il corpo della pagina deve avere un colore di sfondo verde scuro e il test in bianco */
+body{
+	background-color: #2f4f4f;
+	color: white;
+	font-family: serif;
+}
+
+
+/* il header deve avere uno spazio di 120px e contenere uno sfondo con una immagine posizionata al centro e ripetuta */
+header{
+    background-image: url("../img/representative-call.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    padding:120px ;
+} 
+
+/* gli elementi della lista non ordinata sono collegate e hanno il sfondo nero . */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* forzare gli elementi della lista non ordinata,contenuta nel tag "nav" a disporsi a destra */
+nav li {
+  float: right;
+  border-right:1px solid #bbb;
+}
+
+/* mettere in blocco i link della lista non ordinata contenuta nel tag "nav" e con nessun decorazione */
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*al passaggio del mouse , lo sfodo degli elementi della lista deve essere verde */
+nav li a:hover:not(.active) {
+  background-color: green;
+}
+
+/*lo sfondo della pagina corrente deve essere verde per indicarla */
+.active {
+  background-color: green;
+}
+
+
+/*  degli elementi del  contenitore "col-md-4 devono essere in un blocco con testo nero e background bianco.*/
+
+.col-md-4 {
+	width: 500px;
+	padding: 40px;
+	border: 2px solid gray;
+	border-radius: 1em;
+	margin-left: 400px;
+	background-color: white;
+	color: black;
+}
+ 
+ /*separare il contenuto della classe "form-group" dai bordi di 15*/ 
+.form-group {
+	padding: 15px;
+}
+
+/*il contenuto dell'input di tipo text e email deve avere  una larghezza di 300px e una lunghezza di 1em */  */
+div input[type="text"],
+div input[type="email"] {
+	width: 300px;
+	height: 2em;
+	border: 1px solid #bbb;
+	border-radius: 2px;
+}
+
+/*lo spazio del commento deve avere un lunghezza di 200px e una larghezza di 450 */
+textarea{
+	width: 450px;
+	height: 200px;
+}
+
+/*il contenuto dell'input di tipo submit deve avere un colore di sfondo verde e è rachiuso in uno squadro */
+.form-group input[type="submit"]{
+	padding: 12px;
+	border-radius: 5px;
+	background-color: green;
+	color: white;
+}
+
+/*il contenuto di h2 è disposto al centro e separato dal bordo di 20px */
+h2{
+	text-align: center;
+	padding: 20px;
+}
+
+/*il contenuto di h2 è disposto al centro */
+#container p{
+	text-align: center;
+}
+
+/*lo sfondo del footer deve essere nero  */
+.footer{
+  background-color: #333;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 20px 0px;
+  margin-top: 15px;
+}
+
+/* mettre lalarghezza della class "footer-social-icon" al 100% ,l'altezza in automatico   */
+.footer-social-icon{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* gli elementi di ul contenuto nel footer-social-icon devono essere al centro */
+.footer-social-icon ul{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+/*   */
+.footer-social-icon ul li{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  border-radius: 100%;
+  background-color: #32CD32;
+
+}
+
+/* i link  "a" devono avere un carattere di larghezza 25px     */
+.footer-social-icon ul li a{
+  color: #272727;
+  font-size: 25px;
+}
+
+/* mettere immagini al centro del  cerchio    */
+.footer-social-icon ul li a i{
+  line-height: 50px;
+}
+

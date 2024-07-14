@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- definire la lingua della pagina -->
+<html lang="it">
+<head>
+	<title>Registrazione</title>
+
+	<!--definizione del set di caratteri -->	
+    <meta charset="UTF-8">
+
+    <!-- ridimensione della pagina secondo il browser -->
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+    <!--Istruisce gli spider dei motori di ricerca (MdR) su cosa possono fare -->
+    <meta name="robots" content="index ,nofollow">
+
+    <!-- impostazione del favicon imagine -->
+    <link rel="icon" href="img/mente.jpg" type="image/jpg" sizes="16x16">
+
+	<!-- collegamento degli informazioni dello style css (register.css) con la pagina contatti.php -->
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<!-- collegamento degli informazioni pagina javascript (form.js) con la pagina contatti.php -->
+	<script type="text/javascript" src="script/form.js"></script>
+</head>
+
+<!-- inizio del corpo della pagina -->
+<body>
+	<nav>
+		<!-- form per il login -->
+		<form id="log" action="login.html" target="_self">
+		<input type="submit" name="login" value="LOGIN">
+		</form>
+	</nav>
+
+<h1>REGISTRAZIONE</h1>
+<div id="don-r">
+	<P>Tutti i campi con un asterisco (*) sono obbligatori</P>
+	<!-- form per la registrazione -->
+	<form  id="dati" action="register.html" name="emailform" method="POST">
+		<input type="text" name="nome" placeholder="NOME*" required><br/>
+		<input type="text" name="cognome" placeholder="COGNOME *" required><br/>
+		<input type="text" name="telefono" placeholder="TELEFONO "><br/>
+		<input type="email" name="email" placeholder="E-MAIL *" required><br/>
+		<input type="password" name="password" placeholder="PASSWORD *" required minlength="5" maxlength="10"><br/>
+		<input type="submit" name="Registrazione" value="Registrazione" onclick="valform();">
+	</form>
+</div>
+
+<!--collegamento con la pagina dataregister.php -->
+<?php
+include("php/dataregister.php");
+?>
+
+</body>
+</html>
